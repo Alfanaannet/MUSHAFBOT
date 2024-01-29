@@ -33,7 +33,6 @@ async function getStarted(){
 
 
 async function startBot(){
-  console.clear()
   const client = new Client({intents: ['GUILDS', 'GUILD_MESSAGES']})
   client.login(process.env.token).then(()=>{
       console.log('Running the bot...');
