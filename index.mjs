@@ -38,7 +38,7 @@ app.listen(8080, () => {
     console.log("\u001b[32m▣\u001b[0m \u001b[0mBot Run By \u001b[34;1mShuruhatik#2443\u001b[0m")
     console.log("\u001b[32m▣ \u001b[0m\u001b[0m\u001b[40;1m\u001b[34;1mhttps://api.shuruhatik.com/add/"+client.user.id+"\u001b[0m")
   })
-
+ client.on("error", console.log);
   // Event Interaction Create
   client.on(`interactionCreate`, async(interaction) => await commandResponse(client,interaction))
     setTimeout(async()=> {
