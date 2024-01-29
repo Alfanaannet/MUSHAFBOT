@@ -14,7 +14,7 @@ await getStarted()
 async function getStarted(){
   if(await config_delete_db.has("delete_this_value_if_you_want_delete_config") != true || await config_delete_db.get("delete_this_value_if_you_want_delete_config") == true){
   }
-  if(await config_db.get(`bot_config`)) return await startBot()
+  if(true) return await startBot()
   const rainbow = chalkAnimation.karaoke('ًﺍﺮﻴﺜﻛ ﺭﺎﻔﻐﺘﺳﻻﺍﻭ ﻪﻠﻟﺍ ﺮﻛﺫ ﻰﺴﻨﺗ ﻻ ﺀﻲﺷ ﻞﻛ ﻞﺒﻗ');
 
   setTimeout(async()=> {
