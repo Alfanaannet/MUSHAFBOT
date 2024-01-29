@@ -37,20 +37,19 @@ async function getStarted(){
 
 async function startBot(){
   console.clear()
-  const spinner = createSpinner(`Processing..`).start()
   const client = new Client({intents: ['GUILDS', 'GUILD_MESSAGES']})
   client.login(process.env.token).then(()=>{
-    spinner.update({ text: 'Running the bot...' })
+      console.log('Running the bot...');
   }).catch(()=>{
-    spinner.error({ text: 'Invalid Bot Token' })
+      console.log('Invalid Bot Token');
   })
 
   // Event Ready
   client.on("ready",async()=>{
     await synchronizeSlashCommands(client)
+    console.log(`Logged in as ${client.user.tag} (${client.user.id})`);
     client.user.setActivity("هل صليت علي النبى اليوم ؟", { type:3 });
     client.user.setStatus('idle');
-    spinner.success({ text: `Logged in as ${client.user.tag} (${client.user.id})`})
     console.log("\u001b[32m▣\u001b[0m \u001b[0mBot Run By \u001b[34;1mShuruhatik#2443\u001b[0m")
     console.log("\u001b[32m▣ \u001b[0m\u001b[0m\u001b[40;1m\u001b[34;1mhttps://api.shuruhatik.com/add/"+client.user.id+"\u001b[0m")
   })
