@@ -10,7 +10,17 @@ import commandResponse from './util/commandResponse.mjs'
 import replit from "quick.replit"
 const config_delete_db = new Database({path:"./datas/config.yml"})
 await getStarted()
+import express from 'express';
 
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('Hello Express app!')
+});
+
+app.listen(8080, () => {
+  console.log('server started');
+});
 async function getStarted(){
   if(await config_delete_db.has("delete_this_value_if_you_want_delete_config") != true || await config_delete_db.get("delete_this_value_if_you_want_delete_config") == true){
   }
