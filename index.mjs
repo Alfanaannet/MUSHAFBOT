@@ -21,7 +21,6 @@ app.get('/', (req, res) => {
 app.listen(8080, () => {
   console.log('server started');
    startBot()
-  await startBot()
     setTimeout(async()=> {
      console.log(`\u001b[33m Mushaf Bot\u001b[0m first version\nBy \u001b[47;1m\u001b[30;1mShuruhatik#2443\u001b[0m `)
      return await startBot()
