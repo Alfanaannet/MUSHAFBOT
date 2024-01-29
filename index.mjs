@@ -29,7 +29,6 @@ async function startBot(){
   console.clear()
   const spinner = createSpinner(`Processing..`).start()
   const client = new Client({intents: ['GUILDS', 'GUILD_MESSAGES']})
-  const config = await config_db.get(`bot_config`)
   client.login(process.env.token).then(()=>{
     spinner.update({ text: 'Running the bot...' })
   }).catch(()=>{
