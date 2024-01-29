@@ -1,13 +1,9 @@
-import inquirer from "inquirer";
-import chalkAnimation from "chalk-animation";
 import {Client,MessageEmbed} from 'discord.js';
-import { createSpinner } from "nanospinner";
 import Database from "st.db";
 import ms from 'ms';
 import 'console.image'
 import synchronizeSlashCommands from './util/SyncCommands.mjs'
 import commandResponse from './util/commandResponse.mjs'
-import replit from "quick.replit"
 const config_delete_db = new Database({path:"./datas/config.yml"})
 await getStarted()
 import express from 'express';
