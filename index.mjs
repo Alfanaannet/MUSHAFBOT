@@ -16,12 +16,18 @@ app.get('/', (req, res) => {
 app.listen(8080, () => {
   console.log('server started');
 });
- const client = new Client({intents: ['GUILDS', 'GUILD_MESSAGES']})
-  client.login("MTIwMTM1NTQ5Njk5Nzc5Nzk3MA.GJOdBK.k3u5bkULA6MMGAuW3gwVtxYPJPSFzNFZ72ZoF0").then(()=>{
-      console.log('Running the bot...');
-  }).catch(()=>{
-      console.log('Invalid Bot Token');
-  })
+ const client = new Client({
+    auth: "Bot " + process.env.token,
+    rest: { requestTimeout: 60000 },
+    gateway: { intents: ["GUILDS", "GUILD_MESSAGES"] }
+  });
+
+  client.connect();
+  //client.login("MTIwMTM1NTQ5Njk5Nzc5Nzk3MA.GJOdBK.k3u5bkULA6MMGAuW3gwVtxYPJPSFzNFZ72ZoF0").then(()=>{
+    //  console.log('Running the bot...');
+  //}).catch(()=>{
+     // console.log('Invalid Bot Token');
+  //})
 
   // Event Ready
   client.on("ready",async()=>{
