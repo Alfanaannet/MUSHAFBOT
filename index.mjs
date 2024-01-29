@@ -8,7 +8,6 @@ import 'console.image'
 import synchronizeSlashCommands from './util/SyncCommands.mjs'
 import commandResponse from './util/commandResponse.mjs'
 import replit from "quick.replit"
-const config_db = new replit.Database(process.env["REPLIT_DB_URL"])
 const config_delete_db = new Database({path:"./datas/config.yml"})
 await getStarted()
 
