@@ -5,7 +5,6 @@ import 'console.image'
 import synchronizeSlashCommands from './util/SyncCommands.mjs'
 import commandResponse from './util/commandResponse.mjs'
 const config_delete_db = new Database({path:"./datas/config.yml"})
-await getStarted()
 import express from 'express';
 
 const app = express();
@@ -39,7 +38,3 @@ app.listen(8080, () => {
     setTimeout(async()=> {
      console.log(`ITS | MUSHAF BOT BY ALFANAAN`)
   })
-async function getStarted(){
-  if(await config_delete_db.has("delete_this_value_if_you_want_delete_config") != true || await config_delete_db.get("delete_this_value_if_you_want_delete_config") == true){
-  }
-}
