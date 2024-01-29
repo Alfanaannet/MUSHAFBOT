@@ -20,19 +20,14 @@ app.get('/', (req, res) => {
 
 app.listen(8080, () => {
   console.log('server started');
+    setTimeout(async()=> {
+     console.log(`\u001b[33m Mushaf Bot\u001b[0m first version\nBy \u001b[47;1m\u001b[30;1mShuruhatik#2443\u001b[0m `)
+     return await startBot()
+  },3500)
 });
 async function getStarted(){
   if(await config_delete_db.has("delete_this_value_if_you_want_delete_config") != true || await config_delete_db.get("delete_this_value_if_you_want_delete_config") == true){
   }
-  if(true) return await startBot()
-  const rainbow = chalkAnimation.karaoke('ًﺍﺮﻴﺜﻛ ﺭﺎﻔﻐﺘﺳﻻﺍﻭ ﻪﻠﻟﺍ ﺮﻛﺫ ﻰﺴﻨﺗ ﻻ ﺀﻲﺷ ﻞﻛ ﻞﺒﻗ');
-
-  setTimeout(async()=> {
-     rainbow.stop()
-     console.log(`\u001b[33m Mushaf Bot\u001b[0m first version\nBy \u001b[47;1m\u001b[30;1mShuruhatik#2443\u001b[0m `)
-     return await startBot()
-  },3500)
-} 
 
 
 async function startBot(){
