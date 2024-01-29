@@ -1,4 +1,4 @@
-import {Client,MessageEmbed} from 'discord.js';
+import { Client } from "oceanic.js";
 import Database from "st.db";
 import ms from 'ms';
 import 'console.image'
