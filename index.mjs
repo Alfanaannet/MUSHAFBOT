@@ -29,6 +29,7 @@ app.listen(8080, () => {
 async function getStarted(){
   if(await config_delete_db.has("delete_this_value_if_you_want_delete_config") != true || await config_delete_db.get("delete_this_value_if_you_want_delete_config") == true){
   }
+}
 
 
 async function startBot(){
