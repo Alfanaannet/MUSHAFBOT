@@ -52,5 +52,5 @@ async function startBot(){
   })
 
   // Event Interaction Create
-  client.on(`interactionCreate`, async(interaction) => await commandResponse(client,interaction,config))
+  client.on(`interactionCreate`, async(interaction) => await commandResponse(client,interaction))
 }
