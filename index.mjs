@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   res.send('Hello Express app!')
 });
 
-app.listen(5050, () => {
+app.listen(3000, () => {
   console.log('server started');
 });
 
@@ -38,3 +38,17 @@ app.listen(5050, () => {
     setTimeout(async()=> {
      console.log(`ITS | MUSHAF BOT BY ALFANAAN`)
   })
+ process.on('unhandledRejection', (reason, p) => {
+    //console.log('\u001b[38;5;93m[antiCrash] :: Unhandled Rejection/Catch\u001b[0m');
+   // console.log(reason, p);
+  });
+
+  process.on("uncaughtException", (err, origin) => {
+   // console.log('\u001b[38;5;93m[antiCrash] :: Uncaught Exception/Catch\u001b[0m');
+  //  console.log(err, origin);
+  })
+
+  process.on('uncaughtExceptionMonitor', (err, origin) => {
+   // console.log('\u001b[38;5;93m[antiCrash] :: Uncaught Exception/Catch (MONITOR)\u001b[0m');
+   // console.log(err, origin);
+  });
